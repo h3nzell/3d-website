@@ -1,0 +1,10 @@
+@import 'src/assets/style/variables';
+
+.L-space-second {
+  .L-space-second-paragraph {
+    font-family: monospace;
+    color: $grey-05;
+    line-height: 30px;
+    opacity: 0.8;
+  }
+}

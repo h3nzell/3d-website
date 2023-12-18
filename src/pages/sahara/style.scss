@@ -1,0 +1,175 @@
+@import 'src/assets/style/variables';
+@import 'src/assets/style/mixin';
+
+.L-sahara-wrapper {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/image/sahara/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Fira Code" , sans-serif;;
+  font-style: italic;
+  color: $white;
+
+  .L-sahara-navbar {
+    padding: 10px 0;
+    @include screen-max-width-576 {
+      .L-sahara-child, .L-sahara-nav-child {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+
+    .L-sahara-child {
+      p {
+        margin: 0 10px;
+
+        a {
+          color: $white;
+
+          &:hover {
+            color: $grey-base;
+            transition: $transition;
+          }
+        }
+      }
+    }
+
+    .L-sahara-logo {
+      width: 60px;
+      height: 50px;
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .L-sahara-nav-child {
+      .L-sahara-nav-list {
+        .L-sahara-link {
+          margin: 0 15px;
+          cursor: pointer;
+
+          &:hover {
+            color: $grey-base;;
+            transition: $transition;
+          }
+        }
+      }
+    }
+  }
+
+  .L-sahara-main-content {
+    margin-top: 70px;
+
+    .L-sahara-main-content-child {
+      width: 50%;
+      @include screen-max-width-991 {
+        width: 100%;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .L-sahara-main-main-content-title {
+        font-size: 90px;
+        margin: 25px 0;
+        @include screen-max-width-991 {
+          font-size: 70px;
+        }
+        @include screen-max-width-767 {
+          font-size: 50px;
+        }
+        @include screen-max-width-576 {
+          font-size: 35px;
+        }
+      }
+
+      .L-sahara-main-content-paragraph {
+        font-size: 30px;
+        margin: 25px 0;
+        line-height: 50px;
+        @include screen-max-width-991 {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        @include screen-max-width-767 {
+          font-size: 20px;
+          line-height: 20px;
+        }
+        @include screen-max-width-576 {
+          font-size: 18px;
+        }
+      }
+
+      .L-sahara-btn {
+        padding: 20px 30px;
+        background-color: $white;
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+        @include screen-max-width-767 {
+          padding: 15px 20px;
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: $grey-base;
+          color: $white;
+          transition: $transition;
+        }
+      }
+
+      .L-sahara-post {
+        width: 35%;
+        margin: 10px 20px;
+        height: 200px;
+        border-radius: 20px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        transition: transform 0.5s;
+        cursor: pointer;
+        @include screen-max-width-991 {
+          width: 40%;
+
+        }
+        @include screen-max-width-576 {
+          width: 90%;
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+          transition: 0.5s;
+        }
+
+        h6 {
+          font-weight: lighter;
+          font-size: 16px;
+          text-shadow: 0 0 15px #999;
+        }
+
+        p {
+          color: $grey-10;
+          font-weight: lighter;
+          font-size: 10px;
+          text-shadow: 0 0 15px #000;
+        }
+      }
+    }
+  }
+  .L-diagram-wrapper{
+    margin-top: 30px;
+   padding: 30px 0;
+
+  }
+  .L-sahara-title{
+    font-size: 50px;
+    margin: 100px 0 20px 0;
+    text-align: center;
+  }
+}

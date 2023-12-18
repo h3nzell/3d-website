@@ -1,0 +1,173 @@
+@import "src/assets/style/variables";
+@import "src/assets/style/mixin";
+
+$earth: "../../assets/image/space/earth.jpg";
+
+.L-space-wrapper {
+	font-family: monospace;
+	background: $black;
+	color: $white;
+
+	.L-space-header {
+		padding: 15px 0;
+		background: $black;
+
+		.L-space-header-child {
+			display: flex;
+			align-items: center;
+			@include screen-max-width-767 {
+				width: 100%;
+				margin: 10px 0;
+			}
+
+			.L-space-header-title {
+				margin: 0 10px;
+				font-size: 22px;
+				color: $white;
+				cursor: pointer;
+
+				a {
+					color: $white;
+					font-size: 16px;
+
+					&:hover {
+						color: $blue;
+						transition: $transition;
+					}
+				}
+			}
+		}
+
+		.L-space-header-navbar {
+			@include screen-max-width-767 {
+				width: 100%;
+				margin: 10px 0;
+			}
+
+			.L-space-header-list {
+				.L-space-header-link {
+					margin: 0 15px;
+					color: $white;
+					font-size: 16px;
+					cursor: pointer;
+					@include screen-max-width-767 {
+						margin: 6px 15px;
+					}
+
+					&:hover {
+						color: $blue;
+						transition: $transition;
+					}
+				}
+			}
+		}
+	}
+
+	.L-main-wrapper {
+		min-height: 650px;
+		@include screen-max-width-767 {
+			min-height: 700px;
+		}
+		.L-main-space {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			justify-content: center;
+			align-items: baseline;
+			@include screen-max-width-767 {
+				width: 100%;
+			}
+
+			.L-main-space-title {
+				font-size: 36px;
+				margin: 20px 0;
+			}
+
+			.L-main-space-paragraph {
+				font-size: 25px;
+				margin: 20px 0;
+			}
+
+			.L-main-space-start-btn {
+				margin: 10px 0;
+				border: 1px solid white;
+				border-radius: 20px;
+				background-color: transparent;
+				padding: 10px;
+				color: $white;
+
+				&:hover {
+					color: $black;
+					background-color: $white;
+					transition: $transition;
+				}
+			}
+		}
+
+		.L-main-earth {
+			@include screen-max-width-767 {
+				width: 100%;
+			}
+
+			.L-main-earth-background {
+				width: 300px;
+				height: 300px;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				margin: auto;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				border-radius: 50%;
+				box-shadow: -20px -20px 50px 2px rgba(35, 105, 204, 0.473) inset,
+					0 0 20px 2px rgba(34, 122, 122, 0.618);
+				animation: anime 30s linear alternate infinite;
+				background: url($earth);
+			}
+		}
+	}
+}
+
+@keyframes anime {
+	100% {
+		background-position: 100%;
+	}
+}
+
+.L-star {
+	position: absolute;
+	background-color: $white;
+	border-radius: 5rem;
+	animation: move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.type-1 {
+	width: 1px;
+	height: 1px;
+	z-index: 0;
+}
+
+.type-2 {
+	width: 2px;
+	height: 2px;
+	z-index: 0;
+}
+
+.type-3 {
+	width: 3px;
+	height: 3px;
+	z-index: 0;
+}
+
+@keyframes move {
+	0% {
+		transform: translateY(0rem);
+	}
+	100% {
+		transform: translateY(-100rem);
+	}
+}

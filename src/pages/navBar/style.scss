@@ -1,0 +1,145 @@
+.L-home-links-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+
+  .L-home-links {
+    position: relative;
+    transform: skewY(-15deg);
+
+    .L-home-link {
+      position: relative;
+      width: 200px;
+      padding: 15px;
+      background-color: #3e3f46;
+      transition: 0.5s;
+      cursor: pointer;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:nth-child(1) {
+        &::after {
+          background-image: url("../../assets/image/futureCity/background.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        &::before {
+          background-image: url("../../assets/image/futureCity/background.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+
+      &:nth-child(2) {
+        &::after {
+          background-image: url("../../assets/image/space/space-background.jpg");
+        }
+
+        &::before {
+          background-image: url("../../assets/image/space/space-background.jpg");
+        }
+      }
+
+      &:nth-child(3) {
+        &::after {
+          background-image: url("../../assets/image/sahara/sahara.webp");
+          background-position: left;
+        }
+
+        &::before {
+          background-image: url("../../assets/image/sahara/sahara.webp");
+          background-position: bottom;
+        }
+      }
+
+      &:nth-child(4) {
+        &::after {
+          background-image: url("../../assets/image/light/light.jpg");
+          background-position: top;
+        }
+
+        &::before {
+          background-image: url("../../assets/image/light/light.jpg");
+          background-position: center;
+        }
+      }
+
+      &:nth-child(5) {
+        &::after {
+          background-image: url("../../assets/image/3dWebstie/background.jpg");
+          background-position: top;
+        }
+
+        &::before {
+          background-image: url("../../assets/image/3dWebstie/background.jpg");
+          background-position: left;
+        }
+      }
+
+      &:nth-child(6) {
+        &::after {
+          background-image: url("../../assets/image/miami/miami.webp");
+          background-position: center;
+        }
+
+        &::before {
+          background-image: url("../../assets/image/miami/miami.webp");
+          background-position: center;
+        }
+      }
+
+      &:last-child::after {
+        box-shadow: -100px 100px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -1%;
+        left: -40px;
+        width: 40px;
+        height: 100%;
+        background: #2e3133;
+        transform-origin: right;
+        transform: skewY(45deg);
+        transition: 0.5s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: 0%;
+        width: 100%;
+        height: 40px;
+        background: #35383e;
+        transform-origin: bottom;
+        transform: skewX(45deg);
+        transition: 0.5s;
+      }
+
+      &:hover {
+        transform: translateX(-50px);
+
+        a {
+          color: #fff;
+        }
+      }
+
+      a {
+        color: #999;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+      }
+    }
+  }
+}
