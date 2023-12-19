@@ -58,7 +58,7 @@ const Website3D = () => {
 	return (
 		<div className='L-website-3D'>
 			<p className='L-3D-header-title'>
-				<NavLink href='/'> &#10232; </NavLink>
+				<NavLink to='/'> &#10232; </NavLink>
 			</p>
 			<div className='L-3D-container'>
 				<section className='L-3D-gallery'>
